@@ -6,16 +6,48 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------
+     Hamburger menu toggle
+  -------------------------------------------------- */
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks  = document.querySelector('.nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* --------------------------------------------------
      Active nav link on scroll
   -------------------------------------------------- */
   const sections = document.querySelectorAll('.section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const allNavLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          navLinks.forEach((link) => {
+          allNavLinks.forEach((link) => {
             link.classList.toggle(
               'active',
               link.getAttribute('href') === '#' + entry.target.id
@@ -32,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------
      Smooth scroll for anchor links (fallback)
   -------------------------------------------------- */
-  navLinks.forEach((link) => {
+  allNavLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       const targetId = link.getAttribute('href').slice(1);
       const target = document.getElementById(targetId);
