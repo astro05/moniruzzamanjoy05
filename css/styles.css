@@ -779,6 +779,9 @@ footer a:hover {
   }
 }
 
+/* =============================================
+   MODAL
+   ============================================= */
 .modal-backdrop {
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.45);
@@ -811,15 +814,51 @@ footer a:hover {
 }
 .modal-close:hover { background: var(--tag-bg); }
 
+/* Top row: project badge + GitHub button side by side */
+.modal-top-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .modal-num {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem; color: var(--accent);
   background: var(--accent-light);
   padding: 0.15rem 0.5rem; border-radius: 4px;
-  display: inline-block; margin-bottom: 0.75rem;
+  display: inline-block;
 }
+
+/* GitHub button in modal */
+.modal-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.18rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  line-height: 1;
+}
+.modal-github-btn svg {
+  flex-shrink: 0;
+}
+.modal-github-btn:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .modal-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.25rem; color: var(--text);
   line-height: 1.35; margin-bottom: 1rem;
 }
@@ -827,7 +866,7 @@ footer a:hover {
   font-size: 0.68rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted); margin: 1rem 0 0.4rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'DM Sans', monospace;
 }
 .modal-body { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
 .modal-highlights { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
@@ -847,7 +886,7 @@ footer a:hover {
 .click-hint {
   margin-top: 10px;
   font-size: 13px;
-  color: #6b7280; /* soft gray */
+  color: #6b7280;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -856,11 +895,11 @@ footer a:hover {
 }
 
 .click-hint::before {
-  content: "ⓘ"; /* info icon style */
+  content: "ⓘ";
   font-size: 14px;
   color: #9ca3af;
 }
 
 .click-hint:hover {
-  color: #374151; /* darker on hover */
+  color: #374151;
 }

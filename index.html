@@ -54,8 +54,8 @@
         focused on backend development and <strong>modernizing legacy systems</strong>.
         Skilled in <strong>MSSQL optimization</strong>, <strong>clean architecture</strong>,
         and <strong>scalable system design</strong>, with experience in
-        <strong>Angular</strong>, <strong>TypeScript</strong>, <strong>Docker</strong>,
-        and <strong>CI/CD</strong>.
+        <strong>Angular</strong>, <strong>TypeScript</strong>
+        and <strong>Azure</strong>.
       </p>
 
       <!-- Contact chips -->
@@ -323,8 +323,42 @@
       </div>
 
       <div class="projects-grid">
+ 
+        <div class="proj-card" data-index="5">
+          <div class="proj-title">Agentic GenAI orchestration</div>
+          <div class="proj-desc">
+            Agentic GenAI orchestration with GitHub Models, Ollama, RAG, CRAG, AI Agents, S/LLMs, and MCP for scalable multi-model AI workflows.
+          </div>
+          <div class="proj-tags">
+            <span class="proj-tag">.NET</span>
+            <span class="proj-tag">OpenAI</span>
+            <span class="proj-tag">Ollama</span>
+            <span class="proj-tag">GitHub Models</span>
+            <span class="proj-tag">RAG</span>
+            <span class="proj-tag">LLMs</span>
+          </div>
+          <div class="click-hint">Click for details</div>
+        </div>         
+       
+        <div class="proj-card" data-index="4">
+          <div class="proj-title">Workforce Management Platform</div>
+          <div class="proj-desc">
+            A full-stack, event-driven workforce platform built with .NET 10 and React (TypeScript), leveraging dual databases (SQL Server and MongoDB), RabbitMQ for messaging, and Docker for containerization, with development assisted by Claude and Copilot.
+          </div>
+          <div class="proj-tags">
+            <span class="proj-tag">.NET</span>
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">MSSQL</span>
+            <span class="proj-tag">MongoDB</span>
+            <span class="proj-tag">RabbitMQ</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">Docker</span>
+            <span class="proj-tag">CI/CD</span>
+          </div>
+          <div class="click-hint">Click for details</div>
+        </div>        
 
-        <div class="proj-card" data-index="0">
+        <div class="proj-card" data-index="3">
           <div class="proj-title">VP_DDL &ndash; Healthcare Platform Modernization</div>
           <div class="proj-desc">
             Migrated 67 SQL Server stored procedures to Snowflake. Achieved 8.62&times; speed
@@ -332,6 +366,7 @@
           </div>
           <div class="proj-tags">
             <span class="proj-tag">.NET Core</span>
+            <span class="proj-tag">MSSQL</span>
             <span class="proj-tag">Snowflake</span>
             <span class="proj-tag">MSTest</span>
             <span class="proj-tag">Azure DevOps</span>
@@ -339,7 +374,7 @@
           <div class="click-hint">Click for details</div>
         </div>
 
-        <div class="proj-card" data-index="1">
+        <div class="proj-card" data-index="2">
           <div class="proj-title">OSDS Conversion &ndash; Enterprise Platform Upgrade</div>
           <div class="proj-desc">
             Modernized legacy OSDS platform from ASP.NET MVC to .NET Core + Angular v15+.
@@ -348,27 +383,28 @@
           <div class="proj-tags">
             <span class="proj-tag">.NET Core</span>
             <span class="proj-tag">Angular</span>
-            <span class="proj-tag">OAuth/JWT</span>
+            <span class="proj-tag">Kendo UI</span>
+            <span class="proj-tag">JWT</span>
             <span class="proj-tag">TypeScript</span>
           </div>
           <div class="click-hint">Click for details</div>
         </div>
 
-        <div class="proj-card" data-index="2">
+        <div class="proj-card" data-index="1">
           <div class="proj-title">Drishti (JTI) &ndash; Secondary Sales &amp; Supply Chain</div>
           <div class="proj-desc">
             Enterprise platform for Japan Tobacco International covering all facets of secondary
             sales, supply chain management, and distribution logistics.
           </div>
           <div class="proj-tags">
-            <span class="proj-tag">Supply Chain</span>
-            <span class="proj-tag">Enterprise</span>
-            <span class="proj-tag">Sales</span>
+            <span class="proj-tag">ASP.NET</span>
+            <span class="proj-tag">MVC</span>
+            <span class="proj-tag">MSSQL</span>
           </div>
           <div class="click-hint">Click for details</div>
         </div>
 
-        <div class="proj-card" data-index="3">
+        <div class="proj-card" data-index="0">
           <div class="proj-title">OSDS &ndash; Online Sales &amp; Distribution System</div>
           <div class="proj-desc">
             Built enterprise solution for sales, inventory, and logistics with real-time analytics
@@ -600,10 +636,27 @@
  
     </section><!-- /#volunteer -->
     
+    <!-- PROJECT MODAL -->
     <div class="modal-backdrop" id="modal-backdrop">
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button class="modal-close" id="modal-close" aria-label="Close">&#215;</button>
-        <div class="modal-num" id="modal-num"></div>
+        <div class="modal-top-row">
+          <div class="modal-num" id="modal-num"></div>
+          <a class="modal-github-btn" id="modal-github-btn" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651
+                .64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
         <div class="modal-title" id="modal-title"></div>
         <div class="modal-section-label">Overview</div>
         <div class="modal-body" id="modal-body"></div>
