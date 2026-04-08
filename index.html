@@ -324,7 +324,7 @@
 
       <div class="projects-grid">
 
-        <div class="proj-card">
+        <div class="proj-card" data-index="0">
           <div class="proj-title">VP_DDL &ndash; Healthcare Platform Modernization</div>
           <div class="proj-desc">
             Migrated 67 SQL Server stored procedures to Snowflake. Achieved 8.62&times; speed
@@ -336,9 +336,10 @@
             <span class="proj-tag">MSTest</span>
             <span class="proj-tag">Azure DevOps</span>
           </div>
+          <div class="click-hint">Click for details</div>
         </div>
 
-        <div class="proj-card">
+        <div class="proj-card" data-index="1">
           <div class="proj-title">OSDS Conversion &ndash; Enterprise Platform Upgrade</div>
           <div class="proj-desc">
             Modernized legacy OSDS platform from ASP.NET MVC to .NET Core + Angular v15+.
@@ -350,9 +351,10 @@
             <span class="proj-tag">OAuth/JWT</span>
             <span class="proj-tag">TypeScript</span>
           </div>
+          <div class="click-hint">Click for details</div>
         </div>
 
-        <div class="proj-card">
+        <div class="proj-card" data-index="2">
           <div class="proj-title">Drishti (JTI) &ndash; Secondary Sales &amp; Supply Chain</div>
           <div class="proj-desc">
             Enterprise platform for Japan Tobacco International covering all facets of secondary
@@ -363,9 +365,10 @@
             <span class="proj-tag">Enterprise</span>
             <span class="proj-tag">Sales</span>
           </div>
+          <div class="click-hint">Click for details</div>
         </div>
 
-        <div class="proj-card">
+        <div class="proj-card" data-index="3">
           <div class="proj-title">OSDS &ndash; Online Sales &amp; Distribution System</div>
           <div class="proj-desc">
             Built enterprise solution for sales, inventory, and logistics with real-time analytics
@@ -377,6 +380,7 @@
             <span class="proj-tag">REST API</span>
             <span class="proj-tag">SSRS</span>
           </div>
+          <div class="click-hint">Click for details</div>
         </div>
 
       </div><!-- /.projects-grid -->
@@ -596,6 +600,20 @@
  
     </section><!-- /#volunteer -->
     
+    <div class="modal-backdrop" id="modal-backdrop">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="modal-close" aria-label="Close">&#215;</button>
+        <div class="modal-num" id="modal-num"></div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-section-label">Overview</div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-section-label">Key highlights</div>
+        <ul class="modal-highlights" id="modal-highlights"></ul>
+        <div class="modal-section-label">Tech stack</div>
+        <div class="modal-tags" id="modal-tags"></div>
+      </div>
+    </div>
+
   </main>
 
 
